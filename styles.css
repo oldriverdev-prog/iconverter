@@ -71,9 +71,9 @@ header nav a:hover {
     z-index: 2000;
     bottom: -10px;
     left: 50%;
-    transform: translate(-50%, 120%);
+    transform: translate(-80%, 120%);
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     line-height: 1.3;
 }
 
