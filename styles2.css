@@ -1,0 +1,148 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* ====== HEADER FIJO ====== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ff7f32;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+header .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+header nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ====== CONTENEDOR PRINCIPAL ====== */
+.container {
+    max-width: 1200px;
+    margin: 100px auto 40px; /* espacio por header fijo */
+    padding: 20px;
+}
+
+/* ====== DROP-ZONE ====== */
+#drop-zone {
+    background: white;
+    border: 2px dashed #ff7f32;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    transition: background 0.3s, border-color 0.3s;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#drop-zone:hover {
+    background: #fff4ec;
+    border-color: #ff5500;
+}
+#drop-zone p {
+    margin: 5px 0;
+}
+
+/* ====== LAYOUT FLEXIBLE ====== */
+.main-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Vista previa */
+#preview-container {
+    flex: 1 1 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+#preview-container img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+#preview-info {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+/* Panel de opciones */
+.options-panel {
+    flex: 1 1 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+legend {
+    font-weight: bold;
+    color: #ff7f32;
+}
+.option-group {
+    margin-top: 10px;
+}
+button {
+    display: inline-block;
+    padding: 8px 14px;
+    margin-top: 8px;
+    background: #ff7f32;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #ff5500;
+}
+button.secondary {
+    background: #ccc;
+    color: #333;
+}
+button.secondary:hover {
+    background: #bbb;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header nav {
+        margin-top: 10px;
+    }
+    .main-content {
+        flex-direction: column;
+    }
+}
