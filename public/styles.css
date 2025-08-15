@@ -23,7 +23,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-/* ====== HEADER FIJO ====== */
+/* ====== HEADER FIJO ==== */
 header {
     position: fixed;
     top: 0;
